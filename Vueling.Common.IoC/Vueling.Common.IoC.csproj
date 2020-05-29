@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9349951-EEC1-4438-BAFC-F4B7E4607FF9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vueling.Common.IoC</RootNamespace>
+    <AssemblyName>IoCConfigModule.Common.IoC</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="Ninject, Version=3.3.3.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.3\lib\net45\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IoCConfigModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vueling.Business.DomainServices\Vueling.Business.DomainServices.csproj">
+      <Project>{9694EF6C-7A51-4512-BEA2-90A78A4DC61C}</Project>
+      <Name>Vueling.Business.DomainServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Business.HttpClientHelper\Vueling.Business.HttpClientHelper.csproj">
+      <Project>{58AA57F7-B466-449D-B90C-95F776C21BC6}</Project>
+      <Name>Vueling.Business.HttpClientHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Common.Core\Vueling.Common.Core.csproj">
+      <Project>{786A8514-18FF-4814-9C65-5CD52B7C98A8}</Project>
+      <Name>Vueling.Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Common.DataAccess.EF\Vueling.Common.DataAccess.EF.csproj">
+      <Project>{9F16483C-3CF1-4EFF-A384-727D95A5C5BC}</Project>
+      <Name>Vueling.Common.DataAccess.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Common.DataAccess\Vueling.Common.DataAccess.csproj">
+      <Project>{2164506C-CF6D-4489-B064-653722807838}</Project>
+      <Name>Vueling.Common.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Common.DomainServices\Vueling.Common.DomainServices.csproj">
+      <Project>{3DC4C845-3872-43C6-A3AE-5ACE8A423B8D}</Project>
+      <Name>Vueling.Common.DomainServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Common.InitializeDatabase\Vueling.Common.InitializeDatabase.csproj">
+      <Project>{DD972064-9A1F-4789-B7A5-902C00ED5CBB}</Project>
+      <Name>Vueling.Common.InitializeDatabase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Common.Presentation.API\Vueling.Common.Presentation.API.csproj">
+      <Project>{1DF6324F-9EDB-4962-AC39-A6F4F7218DAB}</Project>
+      <Name>Vueling.Common.Presentation.API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.DataAccess.EF\Vueling.DataAccess.EF.csproj">
+      <Project>{19D2C319-F3AB-4D2C-AB8D-9C573BEE1477}</Project>
+      <Name>Vueling.DataAccess.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Domain\Vueling.Domain.csproj">
+      <Project>{87EC3656-4981-449B-A7F1-B3F6F0463521}</Project>
+      <Name>Vueling.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,44 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Vueling",
+		"_postman_id": "020525f2-b095-24ec-6049-3eb3bbe57354",
+		"description": "Test.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/transactions/getbysku/W6927",
+			"request": {
+				"url": "http://localhost:58453/api/transactions/getbysku/W6927",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "api/rates",
+			"request": {
+				"url": "http://localhost:58453/api/rates",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "api/transactions",
+			"request": {
+				"url": "http://localhost:58453/api/transactions",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
